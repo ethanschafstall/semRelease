@@ -1,0 +1,25 @@
+on:
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+          with:
+            token: ${{ secrets.PAT_TOKEN }}
+            
+      - name: Setup Git
+
+      - name: Get latest tag
+
+      - name: Analyse commit message
+
+      - name: Determine new version
+
+      - name: Create new tag
+
+      - name: Show new version
