@@ -21,7 +21,8 @@ jobs:
           git config --global user.name $GIT_USER
           git config --global user.email $GIT_EMAIL
 
-      # - name: Get latest tag
+      - name: Get latest tag
+        run: git checkout (git describe --tags "$(git rev-list --tags --max-count=1)")
 
       # - name: Analyse commit message
 
