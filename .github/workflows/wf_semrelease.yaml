@@ -8,9 +8,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-          with:
-            token: ${{ secrets.PAT_TOKEN }}
+      - name: Setup Git
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
             
       - name: Setup Git
 
