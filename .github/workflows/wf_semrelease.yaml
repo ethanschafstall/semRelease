@@ -13,8 +13,11 @@ jobs:
         with:
           token: ${{ secrets.PAT_TOKEN }}
             
-      # - name: Setup Git
-
+       - name: Setup Git
+         env:        
+          GIT_USER: ${{ secrets.GIT_USER }}
+          GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+         run: git config --global user.name $GIT_USER && git config --global user.email $GIT_EMAIL
       # - name: Get latest tag
 
       # - name: Analyse commit message
